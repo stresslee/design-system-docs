@@ -12,13 +12,13 @@ function Demo() {
         onClick={() => setCount(c => c + 1)}
         style={{ 
           padding: '12px 24px', 
-          backgroundColor: 'var(--dsButtonPrimaryBackground, #007FFF)', 
-          color: 'var(--dsButtonPrimaryText, white)', 
-          border: 'none', 
-          borderRadius: 'var(--dsButtonBorderRadius, 8px)', 
-          fontSize: 'var(--dsFontSizesBody, 16px)',
+          backgroundColor: 'var(--colors-background-bgBrandPrimary, #7f56d9)',
+          color: 'white',
+          border: 'none',
+          borderRadius: '8px',
+          fontSize: 'var(--fontSize-textMd, 16px)',
           cursor: 'pointer',
-          fontWeight: 'var(--dsFontWeightsBodyBold, bold)',
+          fontWeight: '600',
           transition: 'all 0.2s',
         }}>
         클릭해보세요! {count}번
