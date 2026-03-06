@@ -1,4 +1,9 @@
 {
     "colors": "Colors",
+    "typography": "Typography",
+    "spacing": "Spacing",
+    "radius": "Radius",
+    "grid": "Grid & Layout",
+    "effects": "Effects",
     "icons": "Icons"
 }

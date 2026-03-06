@@ -1,5 +1,10 @@
 export default {
-    logo: <strong>디자인 시스템 가이드</strong>,
+    logo: (
+        <span style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+            <img src="/logo.png" alt="Logo" style={{ height: 28, width: 28, borderRadius: '50%' }} />
+            <strong>JuLee Design System</strong>
+        </span>
+    ),
     project: {
         link: 'https://github.com/shuding/nextra',
     },
