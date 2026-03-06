@@ -8,149 +8,210 @@
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   box-sizing: border-box;
+  font-weight: 600;
+  white-space: nowrap;
 }
 
 .button:disabled {
   cursor: not-allowed;
-  opacity: 0.5;
+  opacity: 0.4;
 }
 
 /* --- Sizes --- */
 .size-sm {
-  padding: 8px 16px;
-  font-size: var(--dsFontSizesSm, 13.6px);
-  min-height: 32px;
-  border-radius: var(--dsBorderRadiusSm, 4px);
+  padding: 8px 14px;
+  font-size: 14px;
+  min-height: 36px;
+  border-radius: 8px;
 }
 
 .size-md {
-  padding: var(--dsSpacingMd, 12px) 24px;
-  font-size: var(--dsFontSizesBody, 16px);
-  min-height: 48px;
-  border-radius: var(--dsButtonBorderRadius, 8px);
+  padding: 10px 16px;
+  font-size: 14px;
+  min-height: 40px;
+  border-radius: 8px;
 }
 
 .size-lg {
-  padding: 16px 32px;
-  font-size: var(--dsFontSizesH6, 16px);
-  min-height: 56px;
-  border-radius: var(--dsBorderRadiusLg, 12px);
+  padding: 10px 18px;
+  font-size: 16px;
+  min-height: 44px;
+  border-radius: 8px;
 }
 
-/* --- Variants --- */
+.size-xl {
+  padding: 12px 20px;
+  font-size: 16px;
+  min-height: 48px;
+  border-radius: 8px;
+}
+
+/* Icon only */
+.icon-only.size-sm { padding: 8px; min-width: 36px; }
+.icon-only.size-md { padding: 10px; min-width: 40px; }
+.icon-only.size-lg { padding: 12px; min-width: 44px; }
+.icon-only.size-xl { padding: 14px; min-width: 48px; }
+
+/* --- Action Button Variants --- */
 .variant-primary {
-  background-color: var(--dsButtonPrimaryBackground, #7f9cf5);
-  color: var(--dsButtonPrimaryText, #ffffff);
-  font-weight: var(--dsFontWeightsBodyBold, 700);
+  background-color: var(--dsColorsBackgroundBgBrandPrimary, #7f56d9);
+  color: #fff;
 }
-
-.variant-primary:hover:not(:disabled) {
-  filter: brightness(0.9);
+.variant-primary:hover:not(:disabled), .variant-primary.force-hover {
+  background-color: var(--dsColorsBrandBrand700, #6941c6);
 }
-
-.variant-primary:active:not(:disabled) {
-  filter: brightness(0.8);
+.variant-primary:active:not(:disabled), .variant-primary.force-active {
+  background-color: var(--dsColorsBrandBrand800, #53389e);
+}
+.variant-primary.force-focused {
+  background-color: var(--dsColorsBackgroundBgBrandPrimary, #7f56d9);
+  box-shadow: 0 0 0 4px var(--dsColorsBrandBrand100, #f4ebff);
 }
 
 .variant-secondary {
-  background-color: var(--dsBgSubtle, #edf2f7);
-  color: var(--dsFgDefault, #000000);
-  font-weight: var(--dsFontWeightsBodyBold, 700);
+  background-color: #fff;
+  color: var(--dsColorsGrayLightMode700, #344054);
+  border: 1px solid var(--dsColorsGrayLightMode300, #d0d5dd);
 }
-
-.variant-secondary:hover:not(:disabled) {
-  background-color: var(--dsBgMuted, #e2e8f0);
+.variant-secondary:hover:not(:disabled), .variant-secondary.force-hover {
+  background-color: var(--dsColorsGrayLightMode50, #f9fafb);
 }
-
-.variant-secondary:active:not(:disabled) {
-  background-color: var(--dsColorsGray300, #cbd5e0);
+.variant-secondary:active:not(:disabled), .variant-secondary.force-active {
+  background-color: var(--dsColorsGrayLightMode100, #f2f4f7);
 }
-
-.variant-destructive {
-  background-color: var(--dsColorsRed500, #f56565);
-  color: var(--dsColorsWhite, #ffffff);
-  font-weight: var(--dsFontWeightsBodyBold, 700);
-}
-
-.variant-destructive:hover:not(:disabled) {
-  background-color: var(--dsColorsRed600, #e53e3e);
-}
-
-.variant-destructive:active:not(:disabled) {
-  background-color: var(--dsColorsRed700, #c53030);
-}
-
-.variant-outline {
-  background-color: transparent;
-  color: var(--dsButtonPrimaryBackground, #7f9cf5);
-  border: 1px solid var(--dsButtonPrimaryBackground, #7f9cf5);
-  font-weight: var(--dsFontWeightsBodyBold, 700);
+.variant-secondary.force-focused {
+  box-shadow: 0 0 0 4px var(--dsColorsGrayLightMode100, #f2f4f7);
 }
 
 .variant-tertiary {
   background-color: transparent;
-  color: var(--dsFgDefault, #000000);
-  text-decoration: underline;
+  color: var(--dsColorsGrayLightMode600, #475467);
+}
+.variant-tertiary:hover:not(:disabled), .variant-tertiary.force-hover {
+  background-color: var(--dsColorsGrayLightMode50, #f9fafb);
+}
+.variant-tertiary:active:not(:disabled), .variant-tertiary.force-active {
+  background-color: var(--dsColorsGrayLightMode100, #f2f4f7);
+}
+.variant-tertiary.force-focused {
+  background-color: transparent;
 }
 
 .variant-link-color {
   background-color: transparent;
-  color: var(--dsButtonPrimaryBackground, #7f9cf5);
+  color: var(--dsColorsBrandBrand700, #6941c6);
+  padding-left: 0;
+  padding-right: 0;
+}
+.variant-link-color:hover:not(:disabled), .variant-link-color.force-hover {
+  color: var(--dsColorsBrandBrand800, #53389e);
 }
 
-.size-xl {
-  padding: 24px 48px;
-  font-size: 20px;
-  min-height: 64px;
+.variant-link-gray {
+  background-color: transparent;
+  color: var(--dsColorsGrayLightMode600, #475467);
+  padding-left: 0;
+  padding-right: 0;
+}
+.variant-link-gray:hover:not(:disabled), .variant-link-gray.force-hover {
+  color: var(--dsColorsGrayLightMode700, #344054);
 }
 
-.variant-outline:hover:not(:disabled) {
-  background-color: var(--dsAccentBg, #ebf4ff);
+/* --- Destructive Button Variants --- */
+.variant-destructive-primary {
+  background-color: var(--dsColorsErrorError600, #d92d20);
+  color: #fff;
+}
+.variant-destructive-primary:hover:not(:disabled), .variant-destructive-primary.force-hover {
+  background-color: var(--dsColorsErrorError700, #b42318);
+}
+.variant-destructive-primary.force-focused {
+  background-color: var(--dsColorsErrorError600, #d92d20);
+  box-shadow: 0 0 0 4px var(--dsColorsErrorError100, #fee4e2);
 }
 
-.variant-outline:active:not(:disabled) {
-  background-color: var(--dsColorsIndigo200, #c3dafe);
+.variant-destructive-secondary {
+  background-color: #fff;
+  color: var(--dsColorsErrorError700, #b42318);
+  border: 1px solid var(--dsColorsErrorError300, #fda29b);
+}
+.variant-destructive-secondary:hover:not(:disabled), .variant-destructive-secondary.force-hover {
+  background-color: var(--dsColorsErrorError50, #fef3f2);
+}
+.variant-destructive-secondary.force-focused {
+  box-shadow: 0 0 0 4px var(--dsColorsErrorError100, #fee4e2);
 }
 
-/* For showcase forcing states */
-.force-hover {
-  filter: brightness(0.9);
+.variant-destructive-tertiary {
+  background-color: transparent;
+  color: var(--dsColorsErrorError700, #b42318);
+}
+.variant-destructive-tertiary:hover:not(:disabled), .variant-destructive-tertiary.force-hover {
+  background-color: var(--dsColorsErrorError50, #fef3f2);
 }
 
-.variant-secondary.force-hover {
-  background-color: var(--dsBgMuted, #e2e8f0);
-  filter: none;
+.variant-destructive-link {
+  background-color: transparent;
+  color: var(--dsColorsErrorError700, #b42318);
+  padding-left: 0;
+  padding-right: 0;
+}
+.variant-destructive-link:hover:not(:disabled), .variant-destructive-link.force-hover {
+  color: var(--dsColorsErrorError800, #912018);
 }
 
-.variant-destructive.force-hover {
-  background-color: var(--dsColorsRed600, #e53e3e);
-  filter: none;
+/* --- Close Button --- */
+.variant-close {
+  background-color: transparent;
+  color: var(--dsColorsGrayLightMode500, #667085);
+  padding: 0;
+  border-radius: 8px;
+}
+.variant-close:hover:not(:disabled), .variant-close.force-hover {
+  background-color: var(--dsColorsGrayLightMode100, #f2f4f7);
+  color: var(--dsColorsGrayLightMode700, #344054);
+}
+.variant-close.force-focused {
+  box-shadow: 0 0 0 4px var(--dsColorsGrayLightMode100, #f2f4f7);
+}
+.variant-close-dark {
+  background-color: transparent;
+  color: var(--dsColorsGrayLightMode400, #98a2b3);
+  padding: 0;
+  border-radius: 8px;
+}
+.variant-close-dark:hover:not(:disabled), .variant-close-dark.force-hover {
+  background-color: rgba(255,255,255,0.1);
+  color: #fff;
 }
 
-.variant-outline.force-hover {
-  background-color: var(--dsAccentBg, #ebf4ff);
-  filter: none;
+/* --- Utility Button --- */
+.variant-utility-secondary {
+  background-color: #fff;
+  color: var(--dsColorsGrayLightMode700, #344054);
+  border: 1px solid var(--dsColorsGrayLightMode300, #d0d5dd);
+  border-radius: 8px;
+}
+.variant-utility-secondary:hover:not(:disabled), .variant-utility-secondary.force-hover {
+  background-color: var(--dsColorsGrayLightMode50, #f9fafb);
 }
 
-.force-active {
-  filter: brightness(0.8);
+.variant-utility-tertiary {
+  background-color: transparent;
+  color: var(--dsColorsGrayLightMode500, #667085);
+  border-radius: 8px;
+}
+.variant-utility-tertiary:hover:not(:disabled), .variant-utility-tertiary.force-hover {
+  background-color: var(--dsColorsGrayLightMode50, #f9fafb);
+  color: var(--dsColorsGrayLightMode600, #475467);
 }
 
-.variant-secondary.force-active {
-  background-color: var(--dsColorsGray300, #cbd5e0);
-  filter: none;
+/* Focused state */
+.force-focused {
+  outline: none;
 }
 
-.variant-destructive.force-active {
-  background-color: var(--dsColorsRed700, #c53030);
-  filter: none;
-}
-
-.variant-outline.force-active {
-  background-color: var(--dsColorsIndigo200, #c3dafe);
-  filter: none;
-}
-
+/* Loading spinner */
 .loading-spinner {
   display: inline-block;
   width: 1em;

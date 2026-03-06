@@ -1,0 +1,56 @@
+import { Button } from '../../../components/Button'
+import { ComponentPreview, PropsTable, StateLabel } from '../../../components/ComponentPreview'
+
+# Close Button
+
+모달, 토스트, 배너 등을 닫는 데 사용하는 X 버튼입니다.
+라이트/다크 배경 모드를 지원합니다.
+
+Figma 컴포넌트: `Buttons/Button close X`
+
+---
+
+## Size
+
+<ComponentPreview>
+  <Button variant="close" size="sm" iconOnly={true}>✕</Button>
+  <Button variant="close" size="md" iconOnly={true}>✕</Button>
+  <Button variant="close" size="lg" iconOnly={true}>✕</Button>
+</ComponentPreview>
+
+---
+
+## States (Light)
+
+<ComponentPreview label="Light background">
+  <Button variant="close" size="md" iconOnly={true}>✕</Button>
+  <Button variant="close" size="md" state="hover" iconOnly={true}>✕</Button>
+  <Button variant="close" size="md" state="focused" iconOnly={true}>✕</Button>
+</ComponentPreview>
+
+## States (Dark)
+
+<ComponentPreview dark={true} label="Dark background">
+  <Button variant="close-dark" size="md" iconOnly={true}>✕</Button>
+  <Button variant="close-dark" size="md" state="hover" iconOnly={true}>✕</Button>
+</ComponentPreview>
+
+---
+
+## Props
+
+<PropsTable data={[
+  { name: 'variant', type: "close | close-dark", default: "close", description: '배경 모드. close는 라이트, close-dark는 다크 배경용' },
+  { name: 'size', type: "sm | md | lg", default: "md", description: '버튼 크기' },
+  { name: 'iconOnly', type: 'boolean', default: 'true', description: 'Close 버튼은 항상 아이콘 전용으로 사용합니다' },
+]} />
+
+---
+
+## Figma Variants
+
+| Property | Values |
+| --- | --- |
+| **Size** | `sm` `md` `lg` |
+| **Dark background** | `True` `False` |
+| **State** | `Default` `Hover` `Focused` |
