@@ -4,8 +4,8 @@ export default {
     darkMode: false,
     logo: (
         <span style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-            <img src={`${basePath}/logo.png`} alt="Logo" style={{ height: 28, width: 28, borderRadius: '50%' }} />
-            <strong>JuLee Design System</strong>
+            <img src={`${basePath}/logo.webp`} alt="Logo" style={{ height: 28, width: 28, borderRadius: 6 }} />
+            <strong>아임인 디자인 시스템</strong>
         </span>
     ),
     project: {
@@ -13,7 +13,7 @@ export default {
     },
     docsRepositoryBase: 'https://github.com/shuding/nextra',
     footer: {
-        text: 'My Design System © 2026',
+        text: '아임인 디자인 시스템 © 2026',
     },
     useNextSeoProps() {
         return {
