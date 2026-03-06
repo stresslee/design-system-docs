@@ -1,0 +1,219 @@
+/* Badge base */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-family: 'Pretendard', sans-serif;
+  font-weight: 500;
+  white-space: nowrap;
+  border: none;
+  cursor: default;
+  line-height: 1;
+}
+
+/* Type: Pill (fully rounded) */
+.pill {
+  border-radius: 9999px;
+}
+
+/* Type: Badge (slightly rounded) */
+.rounded {
+  border-radius: 6px;
+}
+
+/* Size: sm */
+.sm {
+  height: 22px;
+  font-size: 12px;
+  padding: 2px 8px;
+}
+
+.sm .dot {
+  width: 6px;
+  height: 6px;
+}
+
+/* Size: md */
+.md {
+  height: 24px;
+  font-size: 14px;
+  padding: 2px 10px;
+}
+
+.md .dot {
+  width: 8px;
+  height: 8px;
+}
+
+/* Size: lg */
+.lg {
+  height: 28px;
+  font-size: 14px;
+  padding: 4px 12px;
+}
+
+.lg .dot {
+  width: 8px;
+  height: 8px;
+}
+
+/* Dot indicator */
+.dot {
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* Icon */
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.sm .icon {
+  width: 12px;
+  height: 12px;
+}
+
+.md .icon,
+.lg .icon {
+  width: 14px;
+  height: 14px;
+}
+
+.icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* ─── Color: Gray ─── */
+.gray {
+  background: #f2f4f7;
+  color: #344054;
+}
+
+.gray .dot {
+  background: #667085;
+}
+
+/* ─── Color: Brand ─── */
+.brand {
+  background: #f4ebff;
+  color: #6941c6;
+}
+
+.brand .dot {
+  background: #9e77ed;
+}
+
+/* ─── Color: Error ─── */
+.error {
+  background: #fef3f2;
+  color: #b42318;
+}
+
+.error .dot {
+  background: #f04438;
+}
+
+/* ─── Color: Warning ─── */
+.warning {
+  background: #fffaeb;
+  color: #b54708;
+}
+
+.warning .dot {
+  background: #f79009;
+}
+
+/* ─── Color: Success ─── */
+.success {
+  background: #ecfdf3;
+  color: #067647;
+}
+
+.success .dot {
+  background: #17b26a;
+}
+
+/* ─── Color: Gray blue ─── */
+.grayBlue {
+  background: #f0f1f5;
+  color: #3b3f54;
+}
+
+.grayBlue .dot {
+  background: #4e5ba6;
+}
+
+/* ─── Color: Blue light ─── */
+.blueLight {
+  background: #f0f9ff;
+  color: #026aa2;
+}
+
+.blueLight .dot {
+  background: #0ba5ec;
+}
+
+/* ─── Color: Blue ─── */
+.blue {
+  background: #eff8ff;
+  color: #175cd3;
+}
+
+.blue .dot {
+  background: #2e90fa;
+}
+
+/* ─── Color: Indigo ─── */
+.indigo {
+  background: #eef4ff;
+  color: #3538cd;
+}
+
+.indigo .dot {
+  background: #6172f3;
+}
+
+/* ─── Color: Purple ─── */
+.purple {
+  background: #f4f3ff;
+  color: #5925dc;
+}
+
+.purple .dot {
+  background: #7a5af8;
+}
+
+/* ─── Color: Pink ─── */
+.pink {
+  background: #fdf2fa;
+  color: #c11574;
+}
+
+.pink .dot {
+  background: #ee46bc;
+}
+
+/* ─── Color: Rose ─── */
+.rose {
+  background: #fff1f3;
+  color: #c01048;
+}
+
+.rose .dot {
+  background: #f63d68;
+}
+
+/* ─── Color: Orange ─── */
+.orange {
+  background: #fff6ed;
+  color: #c4320a;
+}
+
+.orange .dot {
+  background: #ef6820;
+}

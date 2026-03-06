@@ -14,7 +14,8 @@ export function RadiusTable() {
   const [tokens, setTokens] = useState(null);
 
   useEffect(() => {
-    fetch('/tokens.css')
+    const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+    fetch(`${basePath}/tokens.css`)
       .then(r => r.text())
       .then(text => setTokens(parseCSSText(text)))
       .catch(() => {});

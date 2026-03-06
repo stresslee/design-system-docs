@@ -1,0 +1,298 @@
+import { Dropdown, DropdownMenu, DropdownItem, DropdownHeader, DropdownDivider, Select, SelectItem, MailIcon, StarIcon, SettingsIcon, LayersIcon, SearchIcon } from '../../components/Dropdown'
+import { ComponentPreview, PropsTable } from '../../components/ComponentPreview'
+
+# Dropdowns
+
+드롭다운은 서브뷰에서 액션을 그룹화할 때 사용합니다.
+메뉴를 숨기거나 여러 액션을 하나로 묶어야 할 때 유용합니다.
+
+Figma 컴포넌트: `Base components/Dropdowns`
+
+---
+
+## Dropdown Trigger
+
+드롭다운을 열기 위한 트리거 버튼입니다. Button, Icon, Avatar 3가지 타입을 지원합니다.
+
+<ComponentPreview>
+  <Dropdown trigger="button" label="Account" />
+  <Dropdown trigger="icon" />
+  <Dropdown trigger="avatar" avatarText="JL" />
+</ComponentPreview>
+
+---
+
+## Dropdown Menu
+
+메뉴 아이템의 다양한 구성을 지원합니다.
+
+### 기본 메뉴
+
+<ComponentPreview direction="column">
+  <DropdownMenu>
+    <DropdownItem icon={<MailIcon />}>View profile</DropdownItem>
+    <DropdownItem icon={<SettingsIcon />}>Settings</DropdownItem>
+    <DropdownItem icon={<LayersIcon />}>Keyboard shortcuts</DropdownItem>
+    <DropdownDivider />
+    <DropdownItem icon={<StarIcon />}>Changelog</DropdownItem>
+    <DropdownItem icon={<StarIcon />}>Support</DropdownItem>
+    <DropdownDivider />
+    <DropdownItem>Sign out</DropdownItem>
+  </DropdownMenu>
+</ComponentPreview>
+
+### 단축키 표시
+
+<ComponentPreview direction="column">
+  <DropdownMenu>
+    <DropdownItem icon={<MailIcon />} shortcut="⌘K→P">View profile</DropdownItem>
+    <DropdownItem icon={<SettingsIcon />} shortcut="⌘S">Settings</DropdownItem>
+    <DropdownItem icon={<LayersIcon />} shortcut="?">Keyboard shortcuts</DropdownItem>
+  </DropdownMenu>
+</ComponentPreview>
+
+### Avatar 헤더
+
+사용자 프로필 드롭다운에 아바타 헤더를 사용합니다.
+
+<ComponentPreview direction="column">
+  <DropdownMenu>
+    <DropdownHeader avatar name="Olivia Rhye" email="olivia@julee.design" />
+    <DropdownDivider />
+    <DropdownItem icon={<MailIcon />} shortcut="⌘K→P">View profile</DropdownItem>
+    <DropdownItem icon={<SettingsIcon />} shortcut="⌘S">Settings</DropdownItem>
+    <DropdownDivider />
+    <DropdownItem>Sign out</DropdownItem>
+  </DropdownMenu>
+</ComponentPreview>
+
+### 체크박스 메뉴
+
+<ComponentPreview direction="column">
+  <DropdownMenu>
+    <DropdownItem checked={true}>Option 1</DropdownItem>
+    <DropdownItem checked={false}>Option 2</DropdownItem>
+    <DropdownItem checked={true}>Option 3</DropdownItem>
+    <DropdownItem checked={false}>Option 4</DropdownItem>
+  </DropdownMenu>
+</ComponentPreview>
+
+### 상태
+
+<ComponentPreview direction="column">
+  <DropdownMenu>
+    <DropdownItem icon={<MailIcon />}>Default</DropdownItem>
+    <DropdownItem icon={<MailIcon />} state="hover">Hover</DropdownItem>
+    <DropdownItem icon={<MailIcon />} disabled>Disabled</DropdownItem>
+  </DropdownMenu>
+</ComponentPreview>
+
+---
+
+## Select
+
+폼에서 사용하는 선택 입력 컴포넌트입니다.
+
+### 기본 Select
+
+<ComponentPreview direction="column">
+  <Select label="Team member" placeholder="Select team member" size="md" />
+  <Select label="Team member" value="Olivia Rhye" size="md" />
+</ComponentPreview>
+
+### 사이즈
+
+<ComponentPreview direction="column">
+  <Select label="Size sm" value="Olivia Rhye" size="sm" />
+  <Select label="Size md" value="Olivia Rhye" size="md" />
+</ComponentPreview>
+
+### 아이콘 Leading
+
+<ComponentPreview direction="column">
+  <Select label="Team member" value="Olivia Rhye" leadingIcon={<MailIcon />} />
+</ComponentPreview>
+
+### Avatar Leading
+
+<ComponentPreview direction="column">
+  <Select label="Team member" value="Olivia Rhye" leadingAvatar />
+</ComponentPreview>
+
+### Dot Leading
+
+<ComponentPreview direction="column">
+  <Select label="Status" value="Active" leadingDot="#17b26a" />
+</ComponentPreview>
+
+### Search
+
+<ComponentPreview direction="column">
+  <Select label="Search" placeholder="Search..." search />
+</ComponentPreview>
+
+### Tags
+
+<ComponentPreview direction="column">
+  <Select label="Tags" tags={["Design", "Product", "Marketing"]} />
+</ComponentPreview>
+
+### 상태
+
+<ComponentPreview direction="column">
+  <Select label="Placeholder" placeholder="Select team member" state="default" />
+  <Select label="Focused" value="Olivia Rhye" state="focused" />
+  <Select label="Disabled" value="Olivia Rhye" state="disabled" />
+  <Select label="Open" value="Olivia Rhye" state="open" />
+</ComponentPreview>
+
+---
+
+## Select Menu Items
+
+셀렉트 드롭다운 내부의 메뉴 아이템입니다.
+
+### 기본 아이템
+
+<ComponentPreview direction="column">
+  <DropdownMenu>
+    <SelectItem>Olivia Rhye</SelectItem>
+    <SelectItem supportingText="olivia@julee.design">Olivia Rhye</SelectItem>
+    <SelectItem selected>Phoenix Baker</SelectItem>
+    <SelectItem selected supportingText="phoenix@julee.design">Phoenix Baker</SelectItem>
+  </DropdownMenu>
+</ComponentPreview>
+
+### 아이콘 Leading
+
+<ComponentPreview direction="column">
+  <DropdownMenu>
+    <SelectItem icon={<MailIcon />}>Olivia Rhye</SelectItem>
+    <SelectItem icon={<SettingsIcon />} selected>Phoenix Baker</SelectItem>
+    <SelectItem icon={<LayersIcon />} supportingText="@lana">Lana Steiner</SelectItem>
+  </DropdownMenu>
+</ComponentPreview>
+
+### Avatar Leading
+
+<ComponentPreview direction="column">
+  <DropdownMenu>
+    <SelectItem avatar="O" supportingText="olivia@julee.design">Olivia Rhye</SelectItem>
+    <SelectItem avatar="P" supportingText="phoenix@julee.design" selected>Phoenix Baker</SelectItem>
+    <SelectItem avatar="L" supportingText="lana@julee.design">Lana Steiner</SelectItem>
+  </DropdownMenu>
+</ComponentPreview>
+
+### Dot Leading
+
+<ComponentPreview direction="column">
+  <DropdownMenu>
+    <SelectItem dot="#17b26a">Active</SelectItem>
+    <SelectItem dot="#f79009" selected>Warning</SelectItem>
+    <SelectItem dot="#f04438">Error</SelectItem>
+    <SelectItem dot="#667085">Inactive</SelectItem>
+  </DropdownMenu>
+</ComponentPreview>
+
+### 상태
+
+<ComponentPreview direction="column">
+  <DropdownMenu>
+    <SelectItem>Default</SelectItem>
+    <SelectItem state="hover">Hover</SelectItem>
+    <SelectItem disabled>Disabled</SelectItem>
+    <SelectItem selected>Selected</SelectItem>
+  </DropdownMenu>
+</ComponentPreview>
+
+---
+
+## Props
+
+### Dropdown
+
+<PropsTable data={[
+  { name: 'trigger', type: "button | icon | avatar", default: "button", description: '트리거 버튼 타입' },
+  { name: 'label', type: 'string', default: "Options", description: '버튼 트리거의 레이블 텍스트' },
+  { name: 'open', type: 'boolean', default: 'false', description: '메뉴 열림 여부' },
+  { name: 'avatarText', type: 'string', default: '-', description: '아바타 트리거의 이니셜 텍스트' },
+  { name: 'children', type: 'ReactNode', default: '-', description: '메뉴 아이템들' },
+]} />
+
+### DropdownItem
+
+<PropsTable data={[
+  { name: 'icon', type: 'ReactNode', default: '-', description: '왼쪽 아이콘' },
+  { name: 'shortcut', type: 'string', default: '-', description: '오른쪽 단축키 텍스트' },
+  { name: 'disabled', type: 'boolean', default: 'false', description: '비활성화 여부' },
+  { name: 'checked', type: 'boolean', default: '-', description: '체크박스 상태 (undefined=체크박스 없음)' },
+  { name: 'state', type: "default | hover | disabled", default: "default", description: '상태 (문서 시각화용)' },
+  { name: 'children', type: 'ReactNode', default: '-', description: '메뉴 아이템 레이블' },
+]} />
+
+### Select
+
+<PropsTable data={[
+  { name: 'label', type: 'string', default: '-', description: '라벨 텍스트' },
+  { name: 'hint', type: 'string', default: '-', description: '하단 힌트 텍스트' },
+  { name: 'placeholder', type: 'string', default: '-', description: '플레이스홀더 텍스트' },
+  { name: 'value', type: 'string', default: '-', description: '선택된 값' },
+  { name: 'size', type: "sm | md", default: "md", description: '사이즈' },
+  { name: 'state', type: "default | focused | disabled | open", default: "default", description: '상태' },
+  { name: 'leadingIcon', type: 'ReactNode', default: '-', description: '왼쪽 아이콘' },
+  { name: 'leadingAvatar', type: 'boolean', default: 'false', description: '왼쪽 아바타 표시' },
+  { name: 'leadingDot', type: 'string', default: '-', description: '왼쪽 점 색상' },
+  { name: 'search', type: 'boolean', default: 'false', description: '검색 입력 모드' },
+  { name: 'tags', type: 'string[]', default: '[]', description: '태그 배열' },
+]} />
+
+### SelectItem
+
+<PropsTable data={[
+  { name: 'selected', type: 'boolean', default: 'false', description: '선택 여부 (체크마크 표시)' },
+  { name: 'disabled', type: 'boolean', default: 'false', description: '비활성화 여부' },
+  { name: 'state', type: "default | hover | disabled", default: "default", description: '상태 (문서 시각화용)' },
+  { name: 'size', type: "sm | md", default: "md", description: '사이즈' },
+  { name: 'icon', type: 'ReactNode', default: '-', description: '왼쪽 아이콘' },
+  { name: 'avatar', type: 'string', default: '-', description: '왼쪽 아바타 이니셜' },
+  { name: 'dot', type: 'string', default: '-', description: '왼쪽 점 색상' },
+  { name: 'supportingText', type: 'string', default: '-', description: '보조 텍스트' },
+  { name: 'children', type: 'ReactNode', default: '-', description: '메뉴 아이템 레이블' },
+]} />
+
+---
+
+## Figma Variants
+
+### Dropdown
+
+| Property | Values |
+| --- | --- |
+| **Type** | `Button` `Icon` `Avatar` |
+| **Open** | `True` `False` |
+
+### Dropdown List Item
+
+| Property | Values |
+| --- | --- |
+| **Icon** | `True` `False` |
+| **Checkbox** | `True` `False` |
+| **State** | `Default` `Hover/active` `Disabled` |
+| **Divider** | `True` `False` |
+
+### Select
+
+| Property | Values |
+| --- | --- |
+| **Size** | `sm` `md` |
+| **Type** | `Default` `Icon leading` `Avatar leading` `Dot leading` `Search` `Tags` |
+| **State** | `Default` `Placeholder` `Focused` `Disabled` `Open` |
+
+### Select Menu Item
+
+| Property | Values |
+| --- | --- |
+| **Size** | `sm` `md` |
+| **Selected** | `True` `False` |
+| **Type** | `Default` `Icon leading` `Avatar leading` `Dot leading` |
+| **State** | `Default` `Hover` `Disabled` |
