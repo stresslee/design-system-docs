@@ -14,7 +14,9 @@ Figma 컴포넌트: `Base components/Tags`
 
 가장 기본적인 태그입니다. 텍스트만 표시합니다.
 
-<ComponentPreview>
+<ComponentPreview code={`<Tag>Label</Tag>
+<Tag>Design</Tag>
+<Tag>System</Tag>`}>
   <Tag>Label</Tag>
   <Tag>Design</Tag>
   <Tag>System</Tag>
@@ -22,22 +24,18 @@ Figma 컴포넌트: `Base components/Tags`
 
 ### 닫기(Close) 버튼 포함
 
-`action="close"` prop으로 X 닫기 버튼을 추가합니다.
-
-<ComponentPreview>
+<ComponentPreview code={`<Tag action="close">Label</Tag>
+<Tag action="close">Design</Tag>`}>
   <Tag action="close">Label</Tag>
   <Tag action="close">Design</Tag>
-  <Tag action="close">System</Tag>
 </ComponentPreview>
 
 ### 카운트(Count) 배지 포함
 
-`action="count"` prop으로 카운트 배지를 표시합니다.
-
-<ComponentPreview>
+<ComponentPreview code={`<Tag action="count" countValue={5}>Label</Tag>
+<Tag action="count" countValue={12}>Design</Tag>`}>
   <Tag action="count" countValue={5}>Label</Tag>
   <Tag action="count" countValue={12}>Design</Tag>
-  <Tag action="count" countValue={99}>System</Tag>
 </ComponentPreview>
 
 ---
@@ -46,76 +44,60 @@ Figma 컴포넌트: `Base components/Tags`
 
 3가지 크기를 제공합니다: `sm`, `md`, `lg`.
 
-<ComponentPreview>
+<ComponentPreview code={`<Tag size="sm">Small</Tag>
+<Tag size="md">Medium</Tag>
+<Tag size="lg">Large</Tag>`}>
   <Tag size="sm">Small</Tag>
   <Tag size="md">Medium</Tag>
   <Tag size="lg">Large</Tag>
 </ComponentPreview>
 
-<ComponentPreview>
+<ComponentPreview code={`<Tag size="sm" action="close">Small</Tag>
+<Tag size="md" action="close">Medium</Tag>
+<Tag size="lg" action="close">Large</Tag>`}>
   <Tag size="sm" action="close">Small</Tag>
   <Tag size="md" action="close">Medium</Tag>
   <Tag size="lg" action="close">Large</Tag>
-</ComponentPreview>
-
-<ComponentPreview>
-  <Tag size="sm" action="count" countValue={3}>Small</Tag>
-  <Tag size="md" action="count" countValue={3}>Medium</Tag>
-  <Tag size="lg" action="count" countValue={3}>Large</Tag>
 </ComponentPreview>
 
 ---
 
 ## With Dot
 
-`icon="dot"` prop으로 상태 표시 점(dot)을 추가합니다. 온라인 상태 등을 나타낼 때 사용합니다.
+`icon="dot"` - 상태 표시 점을 추가합니다.
 
-<ComponentPreview>
+<ComponentPreview code={`<Tag icon="dot">Label</Tag>
+<Tag icon="dot" action="close">Label</Tag>
+<Tag icon="dot" action="count" countValue={5}>Label</Tag>`}>
   <Tag icon="dot">Label</Tag>
   <Tag icon="dot" action="close">Label</Tag>
   <Tag icon="dot" action="count" countValue={5}>Label</Tag>
-</ComponentPreview>
-
-<ComponentPreview>
-  <Tag size="sm" icon="dot">Small</Tag>
-  <Tag size="md" icon="dot">Medium</Tag>
-  <Tag size="lg" icon="dot">Large</Tag>
 </ComponentPreview>
 
 ---
 
 ## With Avatar
 
-`icon="avatar"` prop으로 아바타 아이콘을 표시합니다. 사용자 태그에 활용합니다.
+`icon="avatar"` - 아바타 아이콘을 표시합니다.
 
-<ComponentPreview>
+<ComponentPreview code={`<Tag icon="avatar">Label</Tag>
+<Tag icon="avatar" action="close">Label</Tag>
+<Tag icon="avatar" action="count" countValue={2}>Label</Tag>`}>
   <Tag icon="avatar">Label</Tag>
   <Tag icon="avatar" action="close">Label</Tag>
   <Tag icon="avatar" action="count" countValue={2}>Label</Tag>
-</ComponentPreview>
-
-<ComponentPreview>
-  <Tag size="sm" icon="avatar">Small</Tag>
-  <Tag size="md" icon="avatar">Medium</Tag>
-  <Tag size="lg" icon="avatar">Large</Tag>
 </ComponentPreview>
 
 ---
 
 ## With Country Flag
 
-`icon="country"` prop으로 국기 아이콘을 표시합니다. 국가/언어 선택에 활용합니다.
+`icon="country"` - 국기 아이콘을 표시합니다.
 
-<ComponentPreview>
+<ComponentPreview code={`<Tag icon="country">Label</Tag>
+<Tag icon="country" action="close">Label</Tag>`}>
   <Tag icon="country">Label</Tag>
   <Tag icon="country" action="close">Label</Tag>
-  <Tag icon="country" action="count" countValue={1}>Label</Tag>
-</ComponentPreview>
-
-<ComponentPreview>
-  <Tag size="sm" icon="country">Small</Tag>
-  <Tag size="md" icon="country">Medium</Tag>
-  <Tag size="lg" icon="country">Large</Tag>
 </ComponentPreview>
 
 ---
@@ -124,25 +106,22 @@ Figma 컴포넌트: `Base components/Tags`
 
 `checkbox` prop으로 체크박스를 추가합니다. 다중 선택 필터에 활용합니다.
 
-<ComponentPreview>
+<ComponentPreview code={`<Tag checkbox>Unchecked</Tag>
+<Tag checkbox checked>Checked</Tag>`}>
   <Tag checkbox>Unchecked</Tag>
   <Tag checkbox checked>Checked</Tag>
 </ComponentPreview>
 
-<ComponentPreview>
+<ComponentPreview code={`<Tag checkbox action="close">With Close</Tag>
+<Tag checkbox checked action="close">Checked + Close</Tag>`}>
   <Tag checkbox action="close">With Close</Tag>
   <Tag checkbox checked action="close">Checked + Close</Tag>
 </ComponentPreview>
 
-<ComponentPreview>
+<ComponentPreview code={`<Tag checkbox icon="dot">With Dot</Tag>
+<Tag checkbox checked icon="dot">Checked + Dot</Tag>`}>
   <Tag checkbox icon="dot">With Dot</Tag>
   <Tag checkbox checked icon="dot">Checked + Dot</Tag>
-</ComponentPreview>
-
-<ComponentPreview>
-  <Tag size="sm" checkbox>Small</Tag>
-  <Tag size="md" checkbox checked>Medium</Tag>
-  <Tag size="lg" checkbox>Large</Tag>
 </ComponentPreview>
 
 ---
@@ -158,16 +137,12 @@ Figma 컴포넌트: `Base components/Tags`
   { name: 'countValue', type: 'number', default: '5', description: 'action="count"일 때 표시할 숫자' },
   { name: 'onClose', type: '() => void', default: '-', description: '닫기 버튼 클릭 핸들러' },
   { name: 'onCheck', type: '() => void', default: '-', description: '체크박스 클릭 핸들러' },
-  { name: 'avatarSrc', type: 'string', default: '-', description: '아바타 이미지 URL' },
-  { name: 'countryCode', type: 'string', default: '-', description: '국기 표시용 코드/이모지' },
   { name: 'children', type: 'ReactNode', default: '-', description: '태그 레이블 텍스트' },
 ]} />
 
 ---
 
 ## Figma Variants
-
-### Tag (Base Component)
 
 | Property | Values |
 | --- | --- |

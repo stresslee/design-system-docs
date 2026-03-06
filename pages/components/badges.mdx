@@ -18,7 +18,11 @@ Badge는 두 가지 형태를 제공합니다.
 
 `type="pill"` (기본값) - 완전히 둥근 형태입니다.
 
-<ComponentPreview>
+<ComponentPreview code={`<Badge color="gray">Label</Badge>
+<Badge color="brand">Label</Badge>
+<Badge color="error">Label</Badge>
+<Badge color="warning">Label</Badge>
+<Badge color="success">Label</Badge>`}>
   <Badge color="gray">Label</Badge>
   <Badge color="brand">Label</Badge>
   <Badge color="error">Label</Badge>
@@ -30,7 +34,11 @@ Badge는 두 가지 형태를 제공합니다.
 
 `type="badge"` - 약간만 둥근 형태입니다.
 
-<ComponentPreview>
+<ComponentPreview code={`<Badge type="badge" color="gray">Label</Badge>
+<Badge type="badge" color="brand">Label</Badge>
+<Badge type="badge" color="error">Label</Badge>
+<Badge type="badge" color="warning">Label</Badge>
+<Badge type="badge" color="success">Label</Badge>`}>
   <Badge type="badge" color="gray">Label</Badge>
   <Badge type="badge" color="brand">Label</Badge>
   <Badge type="badge" color="error">Label</Badge>
@@ -44,9 +52,19 @@ Badge는 두 가지 형태를 제공합니다.
 
 13가지 색상 변형을 지원합니다.
 
-### Pill 타입
-
-<ComponentPreview direction="row">
+<ComponentPreview code={`<Badge color="gray">Gray</Badge>
+<Badge color="brand">Brand</Badge>
+<Badge color="error">Error</Badge>
+<Badge color="warning">Warning</Badge>
+<Badge color="success">Success</Badge>
+<Badge color="grayBlue">Gray blue</Badge>
+<Badge color="blueLight">Blue light</Badge>
+<Badge color="blue">Blue</Badge>
+<Badge color="indigo">Indigo</Badge>
+<Badge color="purple">Purple</Badge>
+<Badge color="pink">Pink</Badge>
+<Badge color="rose">Rose</Badge>
+<Badge color="orange">Orange</Badge>`}>
   <Badge color="gray">Gray</Badge>
   <Badge color="brand">Brand</Badge>
   <Badge color="error">Error</Badge>
@@ -62,37 +80,23 @@ Badge는 두 가지 형태를 제공합니다.
   <Badge color="orange">Orange</Badge>
 </ComponentPreview>
 
-### Badge 타입
-
-<ComponentPreview direction="row">
-  <Badge type="badge" color="gray">Gray</Badge>
-  <Badge type="badge" color="brand">Brand</Badge>
-  <Badge type="badge" color="error">Error</Badge>
-  <Badge type="badge" color="warning">Warning</Badge>
-  <Badge type="badge" color="success">Success</Badge>
-  <Badge type="badge" color="grayBlue">Gray blue</Badge>
-  <Badge type="badge" color="blueLight">Blue light</Badge>
-  <Badge type="badge" color="blue">Blue</Badge>
-  <Badge type="badge" color="indigo">Indigo</Badge>
-  <Badge type="badge" color="purple">Purple</Badge>
-  <Badge type="badge" color="pink">Pink</Badge>
-  <Badge type="badge" color="rose">Rose</Badge>
-  <Badge type="badge" color="orange">Orange</Badge>
-</ComponentPreview>
-
 ---
 
 ## Size
 
 3가지 크기를 지원합니다: `sm` (22px), `md` (24px), `lg` (28px).
 
-<ComponentPreview>
+<ComponentPreview code={`<Badge size="sm" color="brand">Small</Badge>
+<Badge size="md" color="brand">Medium</Badge>
+<Badge size="lg" color="brand">Large</Badge>`}>
   <Badge size="sm" color="brand">Small</Badge>
   <Badge size="md" color="brand">Medium</Badge>
   <Badge size="lg" color="brand">Large</Badge>
 </ComponentPreview>
 
-<ComponentPreview>
+<ComponentPreview code={`<Badge type="badge" size="sm" color="brand">Small</Badge>
+<Badge type="badge" size="md" color="brand">Medium</Badge>
+<Badge type="badge" size="lg" color="brand">Large</Badge>`}>
   <Badge type="badge" size="sm" color="brand">Small</Badge>
   <Badge type="badge" size="md" color="brand">Medium</Badge>
   <Badge type="badge" size="lg" color="brand">Large</Badge>
@@ -102,9 +106,13 @@ Badge는 두 가지 형태를 제공합니다.
 
 ## With Dot Indicator
 
-`icon="dot"` - 상태 표시 점(dot)이 포함된 배지입니다. 색상별로 dot 색상이 다릅니다.
+`icon="dot"` - 상태 표시 점(dot)이 포함된 배지입니다.
 
-<ComponentPreview>
+<ComponentPreview code={`<Badge icon="dot" color="gray">Label</Badge>
+<Badge icon="dot" color="brand">Label</Badge>
+<Badge icon="dot" color="error">Label</Badge>
+<Badge icon="dot" color="warning">Label</Badge>
+<Badge icon="dot" color="success">Label</Badge>`}>
   <Badge icon="dot" color="gray">Label</Badge>
   <Badge icon="dot" color="brand">Label</Badge>
   <Badge icon="dot" color="error">Label</Badge>
@@ -112,7 +120,11 @@ Badge는 두 가지 형태를 제공합니다.
   <Badge icon="dot" color="success">Label</Badge>
 </ComponentPreview>
 
-<ComponentPreview>
+<ComponentPreview code={`<Badge type="badge" icon="dot" color="gray">Label</Badge>
+<Badge type="badge" icon="dot" color="brand">Label</Badge>
+<Badge type="badge" icon="dot" color="error">Label</Badge>
+<Badge type="badge" icon="dot" color="warning">Label</Badge>
+<Badge type="badge" icon="dot" color="success">Label</Badge>`}>
   <Badge type="badge" icon="dot" color="gray">Label</Badge>
   <Badge type="badge" icon="dot" color="brand">Label</Badge>
   <Badge type="badge" icon="dot" color="error">Label</Badge>
@@ -120,21 +132,17 @@ Badge는 두 가지 형태를 제공합니다.
   <Badge type="badge" icon="dot" color="success">Label</Badge>
 </ComponentPreview>
 
-### Dot 크기별 비교
-
-<ComponentPreview>
-  <Badge icon="dot" size="sm" color="success">sm dot (6px)</Badge>
-  <Badge icon="dot" size="md" color="success">md dot (8px)</Badge>
-  <Badge icon="dot" size="lg" color="success">lg dot (8px)</Badge>
-</ComponentPreview>
-
 ---
 
 ## With Icon
 
-`icon="icon"` - 아이콘이 포함된 배지입니다 (별 모양 아이콘 예시).
+`icon="icon"` - 아이콘이 포함된 배지입니다.
 
-<ComponentPreview>
+<ComponentPreview code={`<Badge icon="icon" color="gray">Label</Badge>
+<Badge icon="icon" color="brand">Label</Badge>
+<Badge icon="icon" color="error">Label</Badge>
+<Badge icon="icon" color="warning">Label</Badge>
+<Badge icon="icon" color="success">Label</Badge>`}>
   <Badge icon="icon" color="gray">Label</Badge>
   <Badge icon="icon" color="brand">Label</Badge>
   <Badge icon="icon" color="error">Label</Badge>
@@ -142,29 +150,16 @@ Badge는 두 가지 형태를 제공합니다.
   <Badge icon="icon" color="success">Label</Badge>
 </ComponentPreview>
 
-<ComponentPreview>
-  <Badge type="badge" icon="icon" color="gray">Label</Badge>
-  <Badge type="badge" icon="icon" color="brand">Label</Badge>
-  <Badge type="badge" icon="icon" color="error">Label</Badge>
-  <Badge type="badge" icon="icon" color="warning">Label</Badge>
-  <Badge type="badge" icon="icon" color="success">Label</Badge>
-</ComponentPreview>
-
-### 아이콘 크기별 비교
-
-<ComponentPreview>
-  <Badge icon="icon" size="sm" color="indigo">Small</Badge>
-  <Badge icon="icon" size="md" color="indigo">Medium</Badge>
-  <Badge icon="icon" size="lg" color="indigo">Large</Badge>
-</ComponentPreview>
-
 ---
 
 ## 조합 예시
 
-다양한 색상, 크기, 타입, 아이콘을 조합한 예시입니다.
-
-<ComponentPreview direction="row">
+<ComponentPreview code={`<Badge size="sm" color="success" icon="dot">Active</Badge>
+<Badge size="md" color="error" icon="dot">Offline</Badge>
+<Badge size="lg" color="warning" icon="icon">Pending</Badge>
+<Badge type="badge" size="sm" color="blue">v2.0</Badge>
+<Badge type="badge" size="md" color="purple" icon="dot">Beta</Badge>
+<Badge type="badge" size="lg" color="brand" icon="icon">New</Badge>`}>
   <Badge size="sm" color="success" icon="dot">Active</Badge>
   <Badge size="md" color="error" icon="dot">Offline</Badge>
   <Badge size="lg" color="warning" icon="icon">Pending</Badge>
@@ -188,8 +183,6 @@ Badge는 두 가지 형태를 제공합니다.
 ---
 
 ## Figma Variants
-
-### Badge (Base Component)
 
 | Property | Values |
 | --- | --- |
