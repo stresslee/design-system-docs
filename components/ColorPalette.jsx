@@ -94,10 +94,10 @@ function classifyVars(allVars, groups) {
     const items = [];
     for (const [name, value] of Object.entries(allVars)) {
       if (!used.has(name) && name.startsWith(group.prefix)) {
-        let step = name.substring(group.prefix.length);
+        let step = name.substring(group.prefix.length).replace(/^-+/, '');
         const labelKey = group.label.replace(/\s/g, '');
         if (step.startsWith(labelKey)) {
-          step = step.substring(labelKey.length);
+          step = step.substring(labelKey.length).replace(/^-+/, '');
         }
         items.push({ name, value, step });
         used.add(name);
@@ -239,7 +239,7 @@ function PrimitiveGroup({ label, colors }) {
   return (
     <div style={{ marginBottom: 32 }}>
       <h4 style={{ margin: '0 0 8px', fontSize: 15, fontWeight: 600, color: '#111' }}>{label}</h4>
-      <div style={{ display: 'grid', gridTemplateColumns: `repeat(${Math.min(colors.length, 13)}, 1fr)`, gap: 6 }}>
+      <div style={{ display: 'grid', gridTemplateColumns: `repeat(${Math.min(colors.length, 13)}, minmax(0, 1fr))`, gap: 6 }}>
         {colors.map((c) => <ColorSwatch key={c.name} {...c} />)}
       </div>
     </div>
