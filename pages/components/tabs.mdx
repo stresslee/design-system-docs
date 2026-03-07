@@ -1,0 +1,233 @@
+import { Tabs } from '../../components/Tabs'
+import { ComponentPreview, PropsTable } from '../../components/ComponentPreview'
+
+export const defaultItems = [
+  { label: 'My details', current: true },
+  { label: 'Profile' },
+  { label: 'Password' },
+  { label: 'Team' },
+  { label: 'Plan' },
+]
+
+export const badgeItems = [
+  { label: 'My details', current: true },
+  { label: 'Profile' },
+  { label: 'Password' },
+  { label: 'Team', badge: 2 },
+  { label: 'Plan' },
+]
+
+export const fullItems = [
+  { label: 'My details', current: true },
+  { label: 'Profile' },
+  { label: 'Password' },
+  { label: 'Team' },
+  { label: 'Plan' },
+  { label: 'Billing' },
+  { label: 'Email' },
+  { label: 'Notifications', badge: 2 },
+  { label: 'Integrations' },
+  { label: 'API' },
+]
+
+# Tabs
+
+탭은 관련된 콘텐츠를 그룹화하여 한 번에 하나의 섹션만 표시하는 네비게이션 컴포넌트입니다.
+
+Figma 컴포넌트: `Horizontal tabs`, `Vertical tabs`
+
+---
+
+## Horizontal Tabs
+
+### Button Brand
+
+<ComponentPreview code={`<Tabs type="button-brand" size="sm" items={[
+  { label: 'My details', current: true },
+  { label: 'Profile' },
+  { label: 'Password' },
+  { label: 'Team', badge: 2 },
+  { label: 'Plan' },
+]} />`}>
+  <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+    <Tabs type="button-brand" size="sm" items={badgeItems} />
+    <Tabs type="button-brand" size="md" items={badgeItems} />
+  </div>
+</ComponentPreview>
+
+### Button Gray
+
+<ComponentPreview code={`<Tabs type="button-gray" size="sm" items={[
+  { label: 'My details', current: true },
+  { label: 'Profile' },
+  { label: 'Password' },
+  { label: 'Team', badge: 2 },
+  { label: 'Plan' },
+]} />`}>
+  <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+    <Tabs type="button-gray" size="sm" items={badgeItems} />
+    <Tabs type="button-gray" size="md" items={badgeItems} />
+  </div>
+</ComponentPreview>
+
+### Underline
+
+<ComponentPreview code={`<Tabs type="underline" size="sm" items={[
+  { label: 'My details', current: true },
+  { label: 'Profile' },
+  { label: 'Password' },
+  { label: 'Team', badge: 2 },
+  { label: 'Plan' },
+]} />`}>
+  <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+    <Tabs type="underline" size="sm" items={badgeItems} />
+    <Tabs type="underline" size="md" items={badgeItems} />
+  </div>
+</ComponentPreview>
+
+### Button Border
+
+<ComponentPreview code={`<Tabs type="button-border" size="sm" items={[
+  { label: 'My details', current: true },
+  { label: 'Profile' },
+  { label: 'Password' },
+  { label: 'Team', badge: 2 },
+  { label: 'Plan' },
+]} />`}>
+  <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+    <Tabs type="button-border" size="sm" items={badgeItems} />
+    <Tabs type="button-border" size="md" items={badgeItems} />
+  </div>
+</ComponentPreview>
+
+### Button Minimal
+
+<ComponentPreview code={`<Tabs type="button-minimal" size="sm" items={[
+  { label: 'My details', current: true },
+  { label: 'Profile' },
+  { label: 'Password' },
+  { label: 'Team', badge: 2 },
+  { label: 'Plan' },
+]} />`}>
+  <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+    <Tabs type="button-minimal" size="sm" items={badgeItems} />
+    <Tabs type="button-minimal" size="md" items={badgeItems} />
+  </div>
+</ComponentPreview>
+
+---
+
+## Full Width
+
+탭이 전체 너비를 차지합니다.
+
+<ComponentPreview code={`<Tabs type="button-brand" size="sm" fullWidth items={[
+  { label: 'My details', current: true },
+  { label: 'Profile' },
+  { label: 'Password' },
+  { label: 'Team', badge: 2 },
+  { label: 'Plan' },
+]} />`}>
+  <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+    <Tabs type="button-brand" size="sm" fullWidth items={badgeItems} />
+    <Tabs type="underline" size="sm" fullWidth items={badgeItems} />
+    <Tabs type="button-border" size="sm" fullWidth items={badgeItems} />
+  </div>
+</ComponentPreview>
+
+---
+
+## Vertical Tabs
+
+세로 방향 탭입니다. 설정 페이지, 사이드 네비게이션 등에 사용합니다.
+
+### Button Brand (Vertical)
+
+<ComponentPreview code={`<Tabs type="button-brand" size="sm" vertical items={[
+  { label: 'My details', current: true },
+  { label: 'Profile' },
+  { label: 'Password' },
+  { label: 'Team' },
+  { label: 'Plan' },
+  { label: 'Billing' },
+  { label: 'Email' },
+  { label: 'Notifications', badge: 2 },
+  { label: 'Integrations' },
+  { label: 'API' },
+]} />`}>
+  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 160px)', gap: 24 }}>
+    <Tabs type="button-brand" size="sm" vertical items={fullItems} />
+    <Tabs type="button-gray" size="sm" vertical items={fullItems} />
+    <Tabs type="button-brand" size="md" vertical items={fullItems} />
+    <Tabs type="button-gray" size="md" vertical items={fullItems} />
+  </div>
+</ComponentPreview>
+
+### Line (Vertical)
+
+<ComponentPreview code={`<Tabs type="line" size="sm" vertical items={[
+  { label: 'My details', current: true },
+  { label: 'Profile' },
+  { label: 'Password' },
+  { label: 'Team' },
+  { label: 'Plan' },
+  { label: 'Billing' },
+  { label: 'Email' },
+  { label: 'Notifications', badge: 2 },
+  { label: 'Integrations' },
+  { label: 'API' },
+]} />`}>
+  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 160px)', gap: 24 }}>
+    <Tabs type="line" size="sm" vertical items={fullItems} />
+    <Tabs type="button-border" size="sm" vertical items={fullItems} />
+    <Tabs type="line" size="md" vertical items={fullItems} />
+    <Tabs type="button-minimal" size="md" vertical items={fullItems} />
+  </div>
+</ComponentPreview>
+
+---
+
+## Size
+
+sm, md 두 가지 사이즈를 지원합니다.
+
+<ComponentPreview code={`<Tabs type="button-brand" size="sm" items={defaultItems} />
+<Tabs type="button-brand" size="md" items={defaultItems} />`}>
+  <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+    <Tabs type="button-brand" size="sm" items={defaultItems} />
+    <Tabs type="button-brand" size="md" items={defaultItems} />
+  </div>
+</ComponentPreview>
+
+---
+
+## Props
+
+<PropsTable data={[
+  { name: 'items', type: '{ label: string, current?: boolean, badge?: number }[]', default: '[]', description: '탭 아이템 배열' },
+  { name: 'type', type: "'button-brand' | 'button-gray' | 'underline' | 'button-border' | 'button-minimal' | 'line'", default: "'button-brand'", description: '탭 스타일 타입' },
+  { name: 'size', type: "'sm' | 'md'", default: "'sm'", description: '탭 크기' },
+  { name: 'fullWidth', type: 'boolean', default: 'false', description: '전체 너비 사용 여부 (Horizontal만)' },
+  { name: 'vertical', type: 'boolean', default: 'false', description: '세로 방향 여부' },
+]} />
+
+---
+
+## Figma Variants
+
+### Horizontal Tabs
+
+| Property | Values |
+| --- | --- |
+| **Type** | `Button brand` `Button gray` `Underline` `Button border` `Button minimal` |
+| **Size** | `sm` `md` |
+| **Full width** | `True` `False` |
+| **Breakpoint** | `Desktop` `Mobile` |
+
+### Vertical Tabs
+
+| Property | Values |
+| --- | --- |
+| **Type** | `Button primary` `Button gray` `Line` `Button border` `Button minimal` |
+| **Size** | `sm` `md` |
+| **Breakpoint** | `Desktop` `Mobile` |
