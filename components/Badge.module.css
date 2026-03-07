@@ -90,130 +90,130 @@
 
 /* ─── Color: Gray ─── */
 .gray {
-  background: #f2f4f7;
-  color: #344054;
+  background: var(--componentColors-utility-gray-utilityGray50, #f2f4f7);
+  color: var(--componentColors-utility-gray-utilityGray700, #344054);
 }
 
 .gray .dot {
-  background: #667085;
+  background: var(--componentColors-utility-gray-utilityGray500, #667085);
 }
 
 /* ─── Color: Brand ─── */
 .brand {
-  background: #f4ebff;
-  color: #6941c6;
+  background: var(--componentColors-utility-brand-utilityBrand50, #f4ebff);
+  color: var(--componentColors-utility-brand-utilityBrand700, #6941c6);
 }
 
 .brand .dot {
-  background: #9e77ed;
+  background: var(--componentColors-utility-brand-utilityBrand500, #9e77ed);
 }
 
 /* ─── Color: Error ─── */
 .error {
-  background: #fef3f2;
-  color: #b42318;
+  background: var(--componentColors-utility-error-utilityError50, #fef3f2);
+  color: var(--componentColors-utility-error-utilityError700, #b42318);
 }
 
 .error .dot {
-  background: #f04438;
+  background: var(--componentColors-utility-error-utilityError500, #f04438);
 }
 
 /* ─── Color: Warning ─── */
 .warning {
-  background: #fffaeb;
-  color: #b54708;
+  background: var(--componentColors-utility-warning-utilityWarning50, #fffaeb);
+  color: var(--componentColors-utility-warning-utilityWarning700, #b54708);
 }
 
 .warning .dot {
-  background: #f79009;
+  background: var(--componentColors-utility-warning-utilityWarning500, #f79009);
 }
 
 /* ─── Color: Success ─── */
 .success {
-  background: #ecfdf3;
-  color: #067647;
+  background: var(--componentColors-utility-success-utilitySuccess50, #ecfdf3);
+  color: var(--componentColors-utility-success-utilitySuccess700, #067647);
 }
 
 .success .dot {
-  background: #17b26a;
+  background: var(--componentColors-utility-success-utilitySuccess500, #17b26a);
 }
 
 /* ─── Color: Gray blue ─── */
 .grayBlue {
-  background: #f0f1f5;
-  color: #3b3f54;
+  background: var(--componentColors-utility-grayBlue-utilityGrayBlue50, #f0f1f5);
+  color: var(--componentColors-utility-grayBlue-utilityGrayBlue700, #3b3f54);
 }
 
 .grayBlue .dot {
-  background: #4e5ba6;
+  background: var(--componentColors-utility-grayBlue-utilityGrayBlue500, #4e5ba6);
 }
 
 /* ─── Color: Blue light ─── */
 .blueLight {
-  background: #f0f9ff;
-  color: #026aa2;
+  background: var(--componentColors-utility-blueLight-utilityBlueLight50, #f0f9ff);
+  color: var(--componentColors-utility-blueLight-utilityBlueLight700, #026aa2);
 }
 
 .blueLight .dot {
-  background: #0ba5ec;
+  background: var(--componentColors-utility-blueLight-utilityBlueLight500, #0ba5ec);
 }
 
 /* ─── Color: Blue ─── */
 .blue {
-  background: #eff8ff;
-  color: #175cd3;
+  background: var(--componentColors-utility-blue-utilityBlue50, #eff8ff);
+  color: var(--componentColors-utility-blue-utilityBlue700, #175cd3);
 }
 
 .blue .dot {
-  background: #2e90fa;
+  background: var(--componentColors-utility-blue-utilityBlue500, #2e90fa);
 }
 
 /* ─── Color: Indigo ─── */
 .indigo {
-  background: #eef4ff;
-  color: #3538cd;
+  background: var(--componentColors-utility-indigo-utilityIndigo50, #eef4ff);
+  color: var(--componentColors-utility-indigo-utilityIndigo700, #3538cd);
 }
 
 .indigo .dot {
-  background: #6172f3;
+  background: var(--componentColors-utility-indigo-utilityIndigo500, #6172f3);
 }
 
 /* ─── Color: Purple ─── */
 .purple {
-  background: #f4f3ff;
-  color: #5925dc;
+  background: var(--componentColors-utility-purple-utilityPurple50, #f4f3ff);
+  color: var(--componentColors-utility-purple-utilityPurple700, #5925dc);
 }
 
 .purple .dot {
-  background: #7a5af8;
+  background: var(--componentColors-utility-purple-utilityPurple500, #7a5af8);
 }
 
 /* ─── Color: Pink ─── */
 .pink {
-  background: #fdf2fa;
-  color: #c11574;
+  background: var(--componentColors-utility-pink-utilityPink50, #fdf2fa);
+  color: var(--componentColors-utility-pink-utilityPink700, #c11574);
 }
 
 .pink .dot {
-  background: #ee46bc;
+  background: var(--componentColors-utility-pink-utilityPink500, #ee46bc);
 }
 
 /* ─── Color: Rose ─── */
 .rose {
-  background: #fff1f3;
-  color: #c01048;
+  background: var(--componentColors-utility-rose-utilityRose50, #fff1f3);
+  color: var(--componentColors-utility-rose-utilityRose700, #c01048);
 }
 
 .rose .dot {
-  background: #f63d68;
+  background: var(--componentColors-utility-rose-utilityRose500, #f63d68);
 }
 
 /* ─── Color: Orange ─── */
 .orange {
-  background: #fff6ed;
-  color: #c4320a;
+  background: var(--componentColors-utility-orange-utilityOrange50, #fff6ed);
+  color: var(--componentColors-utility-orange-utilityOrange700, #c4320a);
 }
 
 .orange .dot {
-  background: #ef6820;
+  background: var(--componentColors-utility-orange-utilityOrange500, #ef6820);
 }
